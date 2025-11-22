@@ -1,0 +1,20 @@
+/* Anulación general para el texto del editor (ya visible) */
+.ck-content {
+    background-color: #ffffff !important; /* Fondo blanco */
+}
+
+/* Anulación específica para encabezados H1, H2, H3, etc., DENTRO del editor. */
+/* Esto soluciona el problema de color al aplicar el formato Heading 2/3. */
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+    color: #000000 !important; /* Fuerza el color de texto negro para encabezados */
+}
+
+/* También puedes forzar el color para párrafos si el problema vuelve */
+.ck-content p {
+    color: #000000 !important; 
+}

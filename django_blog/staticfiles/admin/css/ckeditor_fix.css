@@ -1,0 +1,13 @@
+/* Anulación para el área de escritura de CKEditor 5 */
+
+/* Forzar el color de texto a negro y fondo a blanco para anular la herencia del modo oscuro */
+.ck-content {
+    color: #000000 !important;       /* Texto negro */
+    background-color: #ffffff !important; /* Fondo blanco */
+}
+
+/* Es bueno incluir el selector más específico también por si acaso */
+.ck-editor__editable_inline {
+    color: #000000 !important; 
+    background-color: #ffffff !important; 
+}
