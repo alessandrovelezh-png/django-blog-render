@@ -5,7 +5,6 @@ import dj_database_url
 
 # Importa explícitamente la variable DATABASES de base.py
 from .base import * 
-from .base import DATABASES # <--- AÑADE ESTA LÍNEA AQUÍ
 # Aunque el wildcard importa, re-importar la variable la define de forma más robusta.
 
 # ----------------------- 1. CONFIGURACIÓN BÁSICA ------------------------
