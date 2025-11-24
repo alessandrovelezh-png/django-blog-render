@@ -4,7 +4,8 @@ import os
 import dj_database_url
 
 # Importa explícitamente la variable DATABASES de base.py
-from .base import * 
+from .base import *
+from .base import DATABASES
 # Aunque el wildcard importa, re-importar la variable la define de forma más robusta.
 
 # Lee la clave secreta del entorno de Render
@@ -36,5 +37,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 if 'DATABASE_URL' in os.environ:
     DATABASES['default'] = dj_database_url.config(
         conn_max_age=600,
+        ssl_require=True, # <--- ¡Asegura que SSL sea requerido!
         conn_health_checks=True,
     )
