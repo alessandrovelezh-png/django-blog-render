@@ -7,6 +7,12 @@ import dj_database_url
 from .base import * 
 # Aunque el wildcard importa, re-importar la variable la define de forma más robusta.
 
+# Lee la clave secreta del entorno de Render
+SECRET_KEY = os.environ.get('SECRET_KEY', 'default-safe-key-if-not-found')
+
+# Nota: Si el valor de tu SECRET_KEY en base.py era un valor hardcodeado,
+# esta línea SOBREESCRIBIRÁ el valor en el entorno de Render.
+
 # ----------------------- 1. CONFIGURACIÓN BÁSICA ------------------------
 
 # IMPORTANTE: Desactivar DEBUG para producción
