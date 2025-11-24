@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'default-safe-key-if-not-found')
 # ----------------------- 1. CONFIGURACIÓN BÁSICA ------------------------
 
 # IMPORTANTE: Desactivar DEBUG para producción
-DEBUG = False 
+DEBUG = True
 
 # Permite que la configuración de ALLOWED_HOSTS de base.py sea modificada
 # Render inyecta la variable RENDER_EXTERNAL_HOSTNAME
